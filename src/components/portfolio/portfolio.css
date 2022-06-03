@@ -1,0 +1,70 @@
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.portfolio__item {
+  background: var(--color-variant);
+  color: var(--color-white);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+/* .portfolio__item:hover {
+  border-color: var(--color-variant);
+  color: var(--color-primary);
+  background: transparent;
+} */
+
+.portfolio__item-image {
+  border-radius: 0.5rem;
+  height: 40%;
+  overflow: hidden;
+}
+
+.portfolio__item h3 {
+  margin: 1.2rem 0 2rem;
+}
+
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#github_btn, #demo_btn {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+#github_btn:hover, #demo_btn:hover {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* .portfolio__item:hover > .btn {
+  color: var(--color-primary);
+  border-color: var(--color-white);
+} */
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) ===================== */
+
+@media screen and (max-width: 1024px) {
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
+
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
